@@ -1,0 +1,7 @@
+venv/
+config.json
+data.db
+appbot.service
+.DS_Store
+.idea/webServers.xml
+.idea/deployment.xml

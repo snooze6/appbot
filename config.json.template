@@ -1,0 +1,19 @@
+{
+    "apps": [
+      {
+        "name":"Youtube",
+        "type": "iOS",
+        "url": "https://www.apptrace.com/app/544007664"
+      },
+      {
+        "name":"Youtube",
+        "type": "Android",
+        "url": "https://www.apptrace.com/app/com.google.android.youtube"
+      }
+    ],
+    "token": "<Your telegram token>",
+    "whitelist": [
+        "Whitelist of ids",
+        "id2"
+    ]
+}
