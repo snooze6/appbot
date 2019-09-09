@@ -219,6 +219,7 @@ class Appbot():
                 if isApp(arg):
                     self.urls.append(arg)
                     self.send_message("Adding [" + arg + "] to apps")
+            self._update_config()
             self.doit()
 
     # Remove an app from the watchlist (only admin)
@@ -229,6 +230,7 @@ class Appbot():
             if isApp(arg) and arg in self.urls:
                 self.urls.remove(arg)
                 self.send_message("Removing ["+arg+"] from apps")
+            self._update_config()
             self.doit()
 
     ####################################################################################################################
