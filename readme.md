@@ -1,6 +1,6 @@
 # Appbot
 
-This is a simple Telegram bot under 200 lines that notifies you when some app of a given app list is updated into the play store or app store.
+This is a simple Telegram bot that notifies you when some app of a given app list is updated into the play store or app store.
 
 To do so it uses [Apptrace](https://www.apptrace.com) website which is free to use and is updated daily.
 
@@ -43,7 +43,7 @@ With the URL that botfather gives, the second step is to start a conversation wi
 
 
 ## To do
-
-* Simplify the process of obtaining a chatid
-* Add functionality to add apps through a bot command
 * Implement a proper log management to debug failures
+* Add help
+* Support for automatic downloads
+* Deploy assistance
