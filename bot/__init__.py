@@ -183,12 +183,19 @@ class Appbot():
         if self._check_whitelist(update):
             self.updater.bot.send_message(chat_id=update.message.chat_id, text=pformat(self.whitelist))
 
+    def RepresentsInt(s):
+        try: 
+            int(s)
+            return True
+        except ValueError:
+            return False
+            
     # Add an user to the whitelist (only admins)
     def add_whitelist(self, bot, update, args):
         logging.debug("[+] - Executing add_whitelist")
         if self._check_admin(update) and args:
             for arg in args:
-                if arg.isdigit():
+                if arg.RepresentsInt():
                     self.whitelist.append(arg)
                     self.send_message("Adding [" + arg + "] to whitelist")
             self._update_config()
@@ -198,7 +205,7 @@ class Appbot():
         logging.debug("[+] - Executing del_whitelist")
         if self._check_admin(update) and args and len(args) == 1:
             arg = args[0]
-            if arg.isdigit() and arg in self.whitelist:
+            if arg.RepresentsInt() and arg in self.whitelist:
                 self.whitelist.remove(arg)
                 self.send_message("Removing [" + arg + "] from whitelist")
             self._update_config()
